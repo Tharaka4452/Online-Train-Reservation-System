@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@keyframes slideUpFadeIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.95;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    background-image: url('03.jpg');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    max-width: 1150px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #373737;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    border-radius: 10px;
+
+    transform: translateY(50px);
+    opacity: 0;
+
+    /* Animation */
+    animation: slideUpFadeIn 1s ease forwards;
+
+    display: flex;
+    justify-content: center;
+   
+    gap: 25px; /* space between the image and the form */
+}
+
+.image-bar {
+    width: 100%; /* Adjust as needed */
+    max-width: 250px;
+  }
+  
+  .image-bar img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+    border-radius: 10px; /* optional, for rounded corners */
+  }
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight:800;
+    text-align: left;
+    /*color: ;*/
+    padding-bottom: 8px;
+    border-bottom: 2px solid silver;
+    
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label{
+    width: 95%;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input-box input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.password-container {
+    position: relative;
+    width: 95%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Add space for the icon */
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.alert {
+    font-size: 14px;
+    margin: 5px 0;
+    font-style: italic;
+    padding: 10px;
+}
+.alert a{
+    text-decoration: none;
+}
+.alert a:hover{
+    text-decoration: underline;
+}
+
+.button-container{
+    margin: 15px 0;
+   
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to right,#aa076b,#61045f);
+   
+}
+
+.button-container button:hover{
+    background-image: linear-gradient(to right,#61045f,#aa076b);
+}
+
+@media(max-width:600px){
+    .container{
+        min-width: 280px;
+    }
+    .content{
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+    /*.content::-webkit-scrollbar{
+        width: 0;
+    }*/
+}
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Optionally keep the same color as surrounding text */
+}

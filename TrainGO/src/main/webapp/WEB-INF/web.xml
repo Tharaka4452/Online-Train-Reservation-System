@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.Controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Admin Dashboard Servlet -->
+    <servlet>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <servlet-class>com.Controller.AdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <url-pattern>/AdminDashBoard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Passenger Profile Servlet -->
+    <servlet>
+        <servlet-name>PassengerProfileServlet</servlet-name>
+        <servlet-class>com.Controller.PassengerProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassengerProfileServlet</servlet-name>
+        <url-pattern>/PassengerUserProfile</url-pattern>
+    </servlet-mapping>
+
+    <!-- Passenger Insert Servlet -->
+    <servlet>
+        <servlet-name>PassengerInsertServlet</servlet-name>
+        <servlet-class>com.Controller.PassengerInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassengerInsertServlet</servlet-name>
+        <url-pattern>/insertPassenger</url-pattern>
+    </servlet-mapping>
+
+    <!-- Show Update Form Servlet -->
+    <servlet>
+        <servlet-name>ShowUpdateFormServlet</servlet-name>
+        <servlet-class>com.Controller.ShowUpdateFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowUpdateFormServlet</servlet-name>
+        <url-pattern>/pupdate</url-pattern>
+    </servlet-mapping>
+
+    <!-- Passenger Update Servlet -->
+    <servlet>
+        <servlet-name>PassengerUpdateServlet</servlet-name>
+        <servlet-class>com.Controller.PassengerUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassengerUpdateServlet</servlet-name>
+        <url-pattern>/updatePassenger</url-pattern>
+    </servlet-mapping>
+
+    <!-- Passenger Delete Servlet -->
+    <servlet>
+        <servlet-name>PassengerDeleteServlet</servlet-name>
+        <servlet-class>com.Controller.PassengerDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassengerDeleteServlet</servlet-name>
+        <url-pattern>/pdelete</url-pattern>
+    </servlet-mapping>
+    
+     <!-- Passenger Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.Controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+      <!-- Servlet and Mapping for InsertReviewServlet -->
+    <servlet>
+        <servlet-name>InsertReviewServlet</servlet-name>
+        <servlet-class>com.Controller.InsertReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertReviewServlet</servlet-name>
+        <url-pattern>/insertReview</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for ShowReviewsServlet -->
+    <servlet>
+        <servlet-name>ShowReviewsServlet</servlet-name>
+        <servlet-class>com.Controller.ShowReviewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowReviewsServlet</servlet-name>
+        <url-pattern>/showReviews</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for ValidateUsernameServlet -->
+    <servlet>
+        <servlet-name>ValidateUsernameServlet</servlet-name>
+        <servlet-class>com.Controller.ValidateUsernameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidateUsernameServlet</servlet-name>
+        <url-pattern>/validateusername</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for DashboardServlet -->
+    <servlet>
+        <servlet-name>ReviewDashboardServlet</servlet-name>
+        <servlet-class>com.Controller.ReviewDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReviewDashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for UpdateFormServlet -->
+    <servlet>
+        <servlet-name>UpdateFormServlet</servlet-name>
+        <servlet-class>com.Controller.UpdateFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateFormServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for UpdateReviewServlet -->
+    <servlet>
+        <servlet-name>UpdateReviewServlet</servlet-name>
+        <servlet-class>com.Controller.UpdateReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateReviewServlet</servlet-name>
+        <url-pattern>/updateReview</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet and Mapping for DeleteReviewServlet -->
+    <servlet>
+        <servlet-name>DeleteReviewServlet</servlet-name>
+        <servlet-class>com.Controller.DeleteReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteReviewServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    <servlet>
+        <servlet-name>SearchTicketServlet</servlet-name>
+        <servlet-class>com.Controller.SearchTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTicketServlet</servlet-name>
+        <url-pattern>/SearchTicket</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddDetailsServlet</servlet-name>
+        <servlet-class>com.Controller.AddDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddDetailsServlet</servlet-name>
+        <url-pattern>/AddDetails</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EditDetailsServlet</servlet-name>
+        <servlet-class>com.Controller.EditDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditDetailsServlet</servlet-name>
+        <url-pattern>/EditDetails</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdateDetailsServlet</servlet-name>
+        <servlet-class>com.Controller.UpdateDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateDetailsServlet</servlet-name>
+        <url-pattern>/UpdateDetails</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteDetailsServlet</servlet-name>
+        <servlet-class>com.Controller.DeleteDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDetailsServlet</servlet-name>
+        <url-pattern>/DeletDetails</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SearchTrainServlet</servlet-name>
+        <servlet-class>com.Controller.SearchTrainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTrainServlet</servlet-name>
+        <url-pattern>/searchTrain</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Dasun -->
+    
+      <!-- Servlet for creating a schedule -->
+  <servlet>
+    <description></description>
+    <display-name>Create_Schedule</display-name> <!-- Name displayed in management tools -->
+    <servlet-name>Create_Schedule</servlet-name> <!-- Unique name for the servlet -->
+    <servlet-class>com.Controller.Create_Schedule</servlet-class> <!-- Fully qualified class name -->
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Create_Schedule</servlet-name>
+    <url-pattern>/GCreate</url-pattern> <!-- URL pattern for the servlet -->
+  </servlet-mapping>
+    
+    <!-- Servlet for updating a schedule -->
+  <servlet>
+    <description></description>
+    <display-name>Update_Schedule_SV</display-name>
+    <servlet-name>Update_Schedule_SV</servlet-name>
+    <servlet-class>com.Controller.Update_Schedule_SV</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Update_Schedule_SV</servlet-name>
+    <url-pattern>/GUpdate</url-pattern> <!-- URL pattern for updating schedule -->
+  </servlet-mapping>
+
+  <!-- Servlet for deleting a schedule -->
+  <servlet>
+    <description></description>
+    <display-name>Delete_Schedule_SV</display-name>
+    <servlet-name>Delete_Schedule_SV</servlet-name>
+    <servlet-class>com.Controller.Delete_Schedule_SV</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Delete_Schedule_SV</servlet-name>
+    <url-pattern>/GDelete</url-pattern> <!-- URL pattern for deleting schedule -->
+  </servlet-mapping>
+
+  <!-- Servlet for reading schedule -->
+  <servlet>
+    <servlet-name>Read_Schedule_SV</servlet-name>
+    <servlet-class>com.Controller.Read_Schedule_SV</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Read_Schedule_SV</servlet-name>
+    <url-pattern>/Read_Schedule_SV</url-pattern> <!-- URL pattern for reading schedule -->
+  </servlet-mapping>
+
+  <!-- Servlet for logging out -->
+  <servlet>
+    <description></description>
+    <display-name>Logout_SV</display-name>
+    <servlet-name>Logout_SV</servlet-name>
+    <servlet-class>com.Controller.Logout_SV</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Logout_SV</servlet-name>
+    <url-pattern>/Logout_SV</url-pattern> <!-- URL pattern for logout -->
+  </servlet-mapping>
+    
+
+    <!-- Default welcome page (optional) -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
