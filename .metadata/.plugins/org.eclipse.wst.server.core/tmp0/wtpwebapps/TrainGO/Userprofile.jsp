@@ -1,0 +1,128 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="CSS/updateprofile.css">
+</head>
+<body>
+
+<section>
+ <c:forEach var="ppss" items="${ppss }">
+    <div class="container">
+      <div class="image-bar">
+        <div class="button-container">
+           <a href="Userprofile.jsp"> <button type="submit">Profile</button></a>
+           <button type="button" onclick="location.href='pupdate?id=${ppss.id}'">Update Profile</button>
+           <button type="submit"><a href="AfterHomepage.jsp">Home</a></button> 
+
+            
+        </div>
+      </div>
+      
+  
+       <form class="form1"  action="">
+        <h1>Profile Information</h1>
+        <div class="content">
+        
+        	<div class="input-box">
+                <label for="UserID">User ID</label>
+                <input type="text" placeholder="Enter User ID" name="userID" value="${ppss.id}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="firstName">First Name</label>
+                <input type="text" placeholder="Enter first name" name="fname" value="${ppss.fname}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="lastName">Last Name</label>
+                <input type="text" placeholder="Enter last name" name="lname" value="${ppss.lname}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter username" name="username" value="${ppss.username}" readonly>
+            </div>
+            
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your valid email address" name="email" value="${ppss.email}" readonly>
+            </div>
+           <div class="input-box">
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" placeholder="Enter phone number" name="phonenumber" value="${ppss.phoneNumber}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="address">Address</label>
+                <input type="text" placeholder="Enter your address" name="address" value="${ppss.address}" readonly>
+            </div>
+            <div class="input-box">
+                <label for="Password">Password</label>
+                <div class="password-container">
+                  <input type="password" placeholder="Enter new Password" id="password" name="password" value="${ppss.password}" readonly>
+                  <img src="eye-close.png" id="togglePassword1" class="toggle-icon">
+                </div>
+              </div>
+        </div>
+      </form>
+
+ </div>
+  </c:forEach>
+  </section>
+<script>
+document.getElementById('togglePassword1').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const icon = document.getElementById('togglePassword1');
+    // Toggle password visibility
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        icon.src = 'eye-open.png';
+    } else {
+        passwordField.type = 'password';
+        icon.src = 'eye-close.png';
+    }
+});
+
+document.getElementById('togglePassword2').addEventListener('click', function () {
+    const confirmPasswordField = document.getElementById('confirmPassword');
+    const icon = document.getElementById('togglePassword2');
+    // Toggle confirm password visibility
+    if (confirmPasswordField.type === 'password') {
+        confirmPasswordField.type = 'text';
+        icon.src = 'eye-open.png';
+    } else {
+        confirmPasswordField.type = 'password';
+        icon.src = 'eye-close.png';
+    }
+});
+
+function checkPassword() { 
+	let password = document.getElementById("password").value;
+	let cnfrmPassword = document.getElementById("cnfrm-password").value;
+	let message = document.getElementById("message");
+	console.log(" Password:", password, '\n', "Confirm Password:",cnfrmPassword);
+	
+	if(password.length != 0){
+		if (password = cnfrmPassword) {
+			message.textContent = "Wow, Passwords match";
+			message.style.backgroundColor = "#1dcd59";
+		}
+		else{
+			message.textContent = "Sorry, Password don't match";
+			message.style.backgroundColor = "#ff4d4d";
+		}
+	}
+	else{
+	alert("Password can't be empty!");
+	message.textContent = "";
+	}
+}
+
+</script>
+
+</body>
+</html>

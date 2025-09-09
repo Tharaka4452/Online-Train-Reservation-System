@@ -1,0 +1,513 @@
+@charset "UTF-8"; /* Specifies the character encoding for the stylesheet */
+
+* {
+    margin: 0px; /* Resets margin for all elements */
+    padding: 0px; /* Resets padding for all elements */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+    font-family: 'Courier New', Courier, monospace; /* Sets default font */
+}
+
+
+/* Header styles */
+.header {
+    display: flex; /* Enables flex box layout */
+    justify-content: space-between; /* Aligns items with space between */
+    align-items: center; /* Vertically centers items */
+    padding: 10px; /* Adds padding around the header */
+    background-color: #1c1c1c; /* Dark background for header */
+}
+
+.header h1 {
+    color: #fff; /* White text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family for the header */
+    font-size: 25px; /* Font size for the header */
+    font-weight: 700; /* Bold font */
+    padding-left: 20px; /* Left padding for the header text */
+    margin: 0; /* Removes default margin */
+}
+
+.header .mysts {
+    margin-right: 5px; /* Right margin for the mysts element */
+}
+
+/* Styles for header buttons */
+.header_but {
+    background-color: #ffffff; /* White background for buttons */
+    color: rgb(0, 0, 0); /* Black text color */
+    border: none; /* No border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 15px; /* Font size for buttons */
+    border-radius: 15px; /* Rounded corners */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family for buttons */
+    font-weight: 700; /* Bold font for buttons */
+    padding: 7px; /* Padding inside buttons */
+}
+
+.header_but:hover {
+    background-color: #494949; /* Dark gray background on hover */
+    color: #fff; /* White text color on hover */
+    transition: 0.7s ease; /* Smooth transition for hover effect */
+}
+
+
+.image_gallery{
+    width: 100%;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.slider-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider-img{
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.8s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height:250px
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height:300px
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height:350px
+}
+
+
+.slider-images h1 {
+    font-family: "jost", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center; /* Center the text */
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    position: absolute; /* Keep position absolute to overlay on image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(270deg); /* Center and rotate */
+    transition: 0.8s ease;
+    z-index: 1; /* Optional: Adjust z-index if needed */
+}
+
+.slider-images.hover{
+    transform: translateY(-10px);
+}
+
+.slider-images .details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+}
+
+.slider-images .new_bt{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px;
+    transition: 0.8s ease;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border: 5px;
+    margin-top: 5px;
+}
+
+.slider-images .new_bt:hover{
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(114, 114, 114);
+
+}
+
+
+
+
+.slider-img:hover {
+    transform: translateY(-10px); /* Move the image up by 10px on hover */
+}
+
+
+
+.slider-img.active:hover {
+    transform: translateY(-15px); /* Move active image up more when hovered */
+}
+
+/* For smoother hover interactions, adjusting titles and details */
+.slider-img:hover .details h2, .slider-img:hover .details p {
+    transform: translateY(-5px); /* Add slight movement to details */
+}
+
+
+
+
+.slider-images .details h2{
+    font-family: "jost",sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px; 
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: 0.8s ease;
+    display: none;
+}
+
+.slider-images .details p{
+    font-family: "jost",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 18px; 
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: 0.8s ease;
+    display:none;
+}
+
+.slider-img.active{
+    width: 400px !important;
+    height: 350px !important;
+}
+
+.slider-img.active h1{
+    display: none;
+}
+
+.slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+    
+}
+
+.slider-img.active .new_bt{
+display: block;
+}
+
+/* Horizontal line style */
+#hr_line {
+    border: 1px solid black; /* Black border */
+    width: 80%; /* Width of the line */
+    margin: 30px auto; /* Centered with top and bottom margin */
+}
+
+/* About section heading styles */
+.about_para h1 {
+    font-size: 40px; /* Font size for heading */
+    font-weight: 900; /* Bold font */
+    font-family: 'Times New Roman', Times, serif; /* Font family for heading */
+    color: black; /* Black text color */
+    text-align: center; /* Center-aligns text */
+    text-transform: uppercase; /* Transforms text to uppercase */
+}
+
+
+.table-container {
+    width: 100%; /* Full width for the table container */
+    border-collapse: collapse; /* Merges table borders */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Shadow effect for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 20px; /* Rounded corners for the container */
+    justify-content: center; /* Centers content */
+    align-items: center; /* Aligns items vertically */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Merges table borders */
+    background-color: white; /* White background for the table */
+    border-radius: 10px; /* Rounded corners for the table */
+}
+
+table th, table td {
+    padding: 12px 15px; /* Padding for table cells */
+    text-align: center; /* Center aligns text in cells */
+}
+
+table thead th {
+    background-color: #343a40; /* Dark background for table header */
+    color: #ffffff; /* White text color in header */
+    font-weight: bold; /* Bold font for header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for header */
+}
+
+table tbody td {
+    color: #000000; /* Black text color for table body */
+    font-weight: 600; /* Medium bold font weight for body */
+}
+
+table tr {
+    border-bottom: 1px solid #dddddd; /* Light gray border between rows */
+}
+
+table tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Light gray background for even rows */
+}
+
+table tbody tr:hover {
+    background-color: rgb(188, 220, 235); /* Light blue background on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.table-container h2 {
+    text-align: center; /* Center aligns header text */
+    margin-bottom: 20px; /* Margin below the header */
+    color: #333; /* Dark gray color for the header */
+}
+
+.about_para p {
+    font-size: 20px; /* Font size for paragraph */
+    font-weight: 500; /* Medium font weight */
+    font-family: 'Times New Roman', Times, serif; /* Font family for paragraph */
+    color: rgb(27, 27, 27); /* Dark gray color for text */
+    text-align: center; /* Center aligns text */
+    padding: 10px; /* Padding around paragraph */
+    width: 80%; /* Width of the paragraph */
+    margin: 30px auto; /* Center aligns with top and bottom margin */
+}
+
+.about_para {
+    width: 100%; /* Full width for about section */
+    display: inline-block; /* Allows to set width and height */
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Centers content */
+    margin-top: 20px; /* Top margin */
+    margin-left: 10px; /* Left margin */
+    margin-right: 10px; /* Right margin */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.about_para p {
+    border: 1px black; /* Border around paragraph */
+    border-radius: 20px; /* Rounded corners for paragraph */
+    padding: 30px; /* Padding inside paragraph */
+    background-color: rgba(235, 233, 233, 0.308); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for paragraph */
+}
+
+.container {
+    width: auto; /* Automatic width */
+    height: auto; /* Automatic height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns items vertically */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.Cancellation-form {
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+	padding: 20px; /* Padding inside the form */
+    border-radius: 20px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for the form */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically */
+    gap: 30px; /* Space between items */
+   
+}
+
+
+
+.Cancellation-form h2 {
+    text-align: center; /* Center aligns heading */
+    margin-bottom: 20px; /* Margin below heading */
+    font-size: 34px; /* Font size for heading */
+    font-weight: bold; /* Bold font for heading */
+    color: #ffffff; /* White color for heading */
+    text-transform: uppercase; /* Uppercase text for heading */
+    font-family: 'Open Sans', sans-serif; /* Font family for heading */
+}
+
+.image-container img {
+    width: 250px; /* Fixed width for images */
+    height: auto; /* Automatic height */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+form {
+    display: flex; /* Flexbox layout for form */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    gap: 15px; /* Space between items */
+}
+
+.input-group {
+    display: flex; /* Flexbox layout for input groups */
+    flex-direction: column; /* Stacks items vertically */
+    margin-bottom: 10px; /* Bottom margin */
+}
+
+.input-group label {
+    font-size: 20px; /* Font size for label */
+    font-weight: bold; /* Bold font for label */
+    color: #000000; /* Black color for label */
+    font-family: 'Nunito', sans-serif; /* Font family for label */
+}
+
+.input-group input {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    outline: none; /* No outline on focus */
+}
+
+.input-group input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    background-color: #A9A9A9; /* Gray background on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.9); /* Shadow effect on focus */
+    font-weight: bold; /* Bold font on focus */
+}
+
+/* Styles for buttons in different sections */
+.Cancellation button,
+.addtrn button,
+.update button {
+    padding: 10px 20px; /* Padding for buttons */
+    background-image: linear-gradient(to right,#aa076b,#61045f);
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for buttons */
+    font-weight: bold; /* Bold font for buttons */
+}
+
+button:hover {
+    background-image: linear-gradient(to right,#61045f,#aa076b);
+    transition: 0.7s ease; /* Smooth transition on hover */
+}
+
+footer {
+    background-color: #1c1c1c; /* Dark background for footer */
+    color: #fff; /* White text color in footer */
+    padding: 40px 0; /* Padding for footer */
+}
+
+.footer-container {
+    max-width: 1200px; /* Maximum width for footer container */
+    margin: 0 auto; /* Centers footer container */
+    display: flex; /* Flexbox layout for footer */
+    justify-content: space-between; /* Space between footer columns */
+    flex-wrap: wrap; /* Allows wrapping of footer columns */
+}
+
+.footer-column {
+    flex: 1; /* Each column takes equal space */
+    margin: 10px 20px; /* Margin around footer columns */
+}
+
+.footer-column h3 {
+    font-size: 18px; /* Font size for footer headings */
+    margin-bottom: 15px; /* Margin below heading */
+    color: #fff; /* White color for footer headings */
+    font-weight: 800; /* Bold font for footer headings */
+}
+
+
+.footer-column ul {
+    list-style: none; /* Removes bullet points from list */
+    padding: 0; /* Removes padding */
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-column ul li a {
+    color: #bfbfbf; /* Light gray color for links */
+    text-decoration: none; /* No underline on links */
+}
+
+.footer-column ul li a:hover {
+    color: #e91e63; /* Pink color on link hover */
+}
+
+.footer-social {
+    display: flex; /* Flexbox layout for social links */
+    margin-top: 20px; /* Top margin for social links */
+}
+
+.footer-social a {
+    color: #fff; /* White color for social links */
+    margin-right: 15px; /* Space between social links */
+    font-size: 18px; /* Font size for social links */
+    padding: 10px; /* Padding for social link buttons */
+    border-radius: 50%; /* Circular shape for social link buttons */
+    background-color: #333; /* Dark background for social links */
+    display: inline-block; /* Makes them inline-block elements */
+    transition: background-color 0.6s ease; /* Smooth transition for background color */
+}
+.footer-social a:hover {
+    background-color: #e91e63; /* Change background color on hover */
+}
+
+/* Styles for the Update link */
+table tbody td a.update {
+    background-color: #4CAF50; /* Green background for the update link */
+    border-radius: 10px; /* Rounded corners for the link */
+    padding: 5px; /* Padding inside the link */
+    font-size: 12px; /* Font size for the link */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+/* Styles for the Delete link */
+table tbody td a.delete {
+    background-color: #f44336; /* Red background for the delete link */
+    border-radius: 10px; /* Rounded corners for the link */
+    padding: 5px; /* Padding inside the link */
+    font-size: 12px; /* Font size for the link */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+/* Hover effects for all links */
+table tbody td a:hover {
+    opacity: 0.9; /* Slightly decrease opacity on hover */
+    transform: translateY(-2px); /* Move the link slightly up on hover */
+}
+
+/* Hover effects specifically for the Update link */
+table tbody td a.update:hover {
+    background-color: #ffffff; /* Change background to white on hover */
+    color: #000000; /* Change text color to black on hover */
+    transition: background-color 0.6s ease; /* Smooth transition for background color */
+}
+
+/* Hover effects specifically for the Delete link */
+table tbody td a.delete:hover {
+    background-color: #000000; /* Change background to black on hover */
+    color: #ffffff; /* Change text color to white on hover */
+    transition: background-color 0.9s ease; /* Smooth transition for background color */
+}

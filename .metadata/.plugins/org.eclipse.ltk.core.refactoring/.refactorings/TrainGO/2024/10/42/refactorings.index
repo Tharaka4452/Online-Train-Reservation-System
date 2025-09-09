@@ -1,0 +1,16 @@
+1728800434156	Rename type 'ShowUpdateFormServlet'
+1728800511523	Rename type 'PassengerUpdateServlet'
+1728802432053	Delete element
+1728803105365	Rename type 'updatePassenger'
+1728827773477	Rename resource 'update.jsp'
+1728829826915	Rename type 'DashboardServlet'
+1728849969032	Delete elements
+1728850233378	Move 'style.css' to 'CSS'
+1728857593244	Delete elements
+1728862984310	Move '03.png' to 'photo'
+1729010544936	Rename resource 'dashboard.jsp'
+1729010853998	Rename resource 'dashboard.css'
+1729012118615	Rename resource 'PassengerDeleteDashboard..css'
+1729019188969	Copy file
+1729019516792	Rename resource 'istockphoto-1225076672-1024x1024-transformed.jpeg'
+1729023666576	Copy file

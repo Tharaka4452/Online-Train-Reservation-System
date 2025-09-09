@@ -1,0 +1,447 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
+
+.header h1 {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0; 
+}
+
+.header .mysts {
+    margin-right: 20px; 
+}
+
+.header_but {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.header_but:hover {
+    background-color: #494949; 
+    color: #fff;
+    transition: 0.7s ease;
+}
+
+
+
+.image_gallery{
+    width: 100%;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.slider-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider-img{
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.8s ease;
+}
+
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height:250px
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height:300px
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height:350px
+}
+
+
+.slider-images h1 {
+    font-family: "jost", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center; /* Center the text */
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    position: absolute; /* Keep position absolute to overlay on image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(270deg); /* Center and rotate */
+    transition: 0.8s ease;
+    z-index: 1; /* Optional: Adjust z-index if needed */
+}
+
+.slider-images.hover{
+    transform: translateY(-10px);
+}
+
+.slider-images .details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+}
+
+.slider-images .new_bt{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px;
+    transition: 0.8s ease;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border: 5px;
+    margin-top: 5px;
+}
+
+.slider-images .new_bt:hover{
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(114, 114, 114);
+
+}
+
+
+.new_bt{
+	text-decoration: none;
+}
+
+.slider-img:hover {
+    transform: translateY(-10px); /* Move the image up by 10px on hover */
+}
+
+
+
+.slider-img.active:hover {
+    transform: translateY(-15px); /* Move active image up more when hovered */
+}
+
+/* For smoother hover interactions, adjusting titles and details */
+.slider-img:hover .details h2, .slider-img:hover .details p {
+    transform: translateY(-5px); /* Add slight movement to details */
+}
+
+
+
+
+.slider-images .details h2{
+    font-family: "jost",sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px; 
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: 0.8s ease;
+    display: none;
+}
+
+.slider-images .details p{
+    font-family: "jost",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 18px; 
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: 0.8s ease;
+    display:none;
+}
+
+.slider-img.active{
+    width: 400px !important;
+    height: 350px !important;
+}
+
+.slider-img.active h1{
+    display: none;
+}
+
+.slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+    
+}
+
+.slider-img.active .new_bt{
+display: block;
+}
+
+#hr_line{
+    border: 1px solid black;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.about_para h1{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table tbody td {
+    color: #000000;
+    font-weight: 600;
+}
+
+table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about_para p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(27, 27, 27);
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.about_para{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about_para p{
+    border: 1px black;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgba(235, 233, 233, 0.308);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+.image-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #5f5d5d;
+    font-size: 20px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #45a049;
+    transition: 0.7s ease;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+.footer-column h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #e91e63;
+}
+
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.footer-social a:hover {
+    background-color: #e91e63;
+}
