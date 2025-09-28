@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Community Support
+    url: https://github.com/orgs/community/discussions
+    about: Please ask and answer questions here.
+  - name: Security Vulnerability
+    url: https://github.com/your-username/Online-Train-Reservation-System/security/advisories/new
+    about: Please report security vulnerabilities privately.
